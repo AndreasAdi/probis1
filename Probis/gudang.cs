@@ -29,6 +29,7 @@ namespace Probis
         }
         public void load_dg_stock()
         {
+            //Comment test Commit
             conn.Open();
             dataGridView_stock.Rows.Clear();
             string querySelectStock = "Select * from stock";
