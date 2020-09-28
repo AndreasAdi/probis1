@@ -49,6 +49,7 @@
             this.pictureBox4.Size = new System.Drawing.Size(1454, 78);
             this.pictureBox4.TabIndex = 4;
             this.pictureBox4.TabStop = false;
+            this.pictureBox4.Click += new System.EventHandler(this.pictureBox4_Click);
             // 
             // label1
             // 
