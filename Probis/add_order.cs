@@ -20,8 +20,8 @@ namespace Probis
 
         private void add_order_Load(object sender, EventArgs e)
         {
-            var topLeftHeaderCell = dataGridView1.TopLeftHeaderCell;
-            OpenChildForm(new Coffee());
+            var topLeftHeaderCell = dataGridView_order.TopLeftHeaderCell;
+            OpenChildForm(new Coffee(this));
         }
 
         private void OpenChildForm(Form childForm)
@@ -42,7 +42,7 @@ namespace Probis
 
         private void jFlatButton1_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new Coffee());
+            OpenChildForm(new Coffee(this));
         }
 
         private void jFlatButton2_Click(object sender, EventArgs e)
