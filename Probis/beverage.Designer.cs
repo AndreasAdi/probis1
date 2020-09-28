@@ -28,61 +28,30 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.Picture = new System.Windows.Forms.DataGridViewImageColumn();
-            this.Nama = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Price = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Add = new System.Windows.Forms.DataGridViewButtonColumn();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(beverage));
+            this.dataGridView_berverages = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.pictureBox_coffe = new System.Windows.Forms.PictureBox();
+            this.numericUpDown_jumlah = new System.Windows.Forms.NumericUpDown();
+            this.button_add = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_berverages)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_coffe)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_jumlah)).BeginInit();
             this.SuspendLayout();
             // 
-            // dataGridView1
+            // dataGridView_berverages
             // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Picture,
-            this.Nama,
-            this.Price,
-            this.Add});
-            this.dataGridView1.Location = new System.Drawing.Point(72, 130);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(953, 397);
-            this.dataGridView1.TabIndex = 0;
-            // 
-            // Picture
-            // 
-            this.Picture.HeaderText = "Picture";
-            this.Picture.MinimumWidth = 6;
-            this.Picture.Name = "Picture";
-            this.Picture.ReadOnly = true;
-            // 
-            // Nama
-            // 
-            this.Nama.HeaderText = "Name";
-            this.Nama.MinimumWidth = 6;
-            this.Nama.Name = "Nama";
-            this.Nama.ReadOnly = true;
-            // 
-            // Price
-            // 
-            this.Price.HeaderText = "Price";
-            this.Price.MinimumWidth = 6;
-            this.Price.Name = "Price";
-            this.Price.ReadOnly = true;
-            // 
-            // Add
-            // 
-            this.Add.HeaderText = "Add";
-            this.Add.MinimumWidth = 6;
-            this.Add.Name = "Add";
-            this.Add.ReadOnly = true;
+            this.dataGridView_berverages.AllowUserToAddRows = false;
+            this.dataGridView_berverages.AllowUserToDeleteRows = false;
+            this.dataGridView_berverages.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridView_berverages.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView_berverages.Location = new System.Drawing.Point(375, 130);
+            this.dataGridView_berverages.Name = "dataGridView_berverages";
+            this.dataGridView_berverages.ReadOnly = true;
+            this.dataGridView_berverages.RowHeadersWidth = 51;
+            this.dataGridView_berverages.RowTemplate.Height = 24;
+            this.dataGridView_berverages.Size = new System.Drawing.Size(416, 397);
+            this.dataGridView_berverages.TabIndex = 0;
             // 
             // label1
             // 
@@ -95,17 +64,49 @@
             this.label1.Text = "Beverages";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
+            // pictureBox_coffe
+            // 
+            this.pictureBox_coffe.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox_coffe.Image")));
+            this.pictureBox_coffe.Location = new System.Drawing.Point(72, 130);
+            this.pictureBox_coffe.Name = "pictureBox_coffe";
+            this.pictureBox_coffe.Size = new System.Drawing.Size(297, 397);
+            this.pictureBox_coffe.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox_coffe.TabIndex = 10;
+            this.pictureBox_coffe.TabStop = false;
+            // 
+            // numericUpDown_jumlah
+            // 
+            this.numericUpDown_jumlah.Location = new System.Drawing.Point(826, 269);
+            this.numericUpDown_jumlah.Name = "numericUpDown_jumlah";
+            this.numericUpDown_jumlah.Size = new System.Drawing.Size(214, 22);
+            this.numericUpDown_jumlah.TabIndex = 13;
+            // 
+            // button_add
+            // 
+            this.button_add.Location = new System.Drawing.Point(826, 307);
+            this.button_add.Name = "button_add";
+            this.button_add.Size = new System.Drawing.Size(214, 68);
+            this.button_add.TabIndex = 12;
+            this.button_add.Text = "Add";
+            this.button_add.UseVisualStyleBackColor = true;
+            // 
             // beverage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1080, 546);
+            this.Controls.Add(this.numericUpDown_jumlah);
+            this.Controls.Add(this.button_add);
+            this.Controls.Add(this.pictureBox_coffe);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dataGridView_berverages);
             this.Name = "beverage";
             this.Text = "beverage";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.Load += new System.EventHandler(this.beverage_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_berverages)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_coffe)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_jumlah)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -113,11 +114,10 @@
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dataGridView_berverages;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DataGridViewImageColumn Picture;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Nama;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Price;
-        private System.Windows.Forms.DataGridViewButtonColumn Add;
+        private System.Windows.Forms.PictureBox pictureBox_coffe;
+        private System.Windows.Forms.NumericUpDown numericUpDown_jumlah;
+        private System.Windows.Forms.Button button_add;
     }
 }
