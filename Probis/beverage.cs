@@ -101,7 +101,35 @@ namespace Probis
         private void button_add_Click(object sender, EventArgs e)
         {
             string qty = numericUpDown_jumlah.Value.ToString();
-            addorder.dataGridView_order.Rows.Add(nama_menu, qty, harga);
+            bool ada = false;
+
+            if (addorder.dataGridView_order.Rows.Count > 0)
+            {
+                foreach (DataGridViewRow row in addorder.dataGridView_order.Rows)
+                {
+
+                    if (row.Cells[0].Value.ToString() == nama_menu)
+                    {
+                        int qtyold = int.Parse(row.Cells[1].Value.ToString());
+                        row.Cells[1].Value = qtyold + int.Parse(qty);
+                        ada = true;
+                    }
+                    else if (row.Cells[0].Value.ToString() != nama_menu)
+                    {
+
+                    }
+
+                }
+                if (ada == false)
+                {
+                    addorder.dataGridView_order.Rows.Add(nama_menu, qty, harga);
+                }
+
+            }
+            else
+            {
+                addorder.dataGridView_order.Rows.Add(nama_menu, qty, harga);
+            }
         }
     }
 }

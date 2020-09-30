@@ -12,6 +12,7 @@ namespace Probis
 {
     public partial class add_order : Form
     {
+        
         private Form currentChildForm;
         public add_order()
         {
@@ -63,6 +64,39 @@ namespace Probis
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+        private void dataGridView_order_RowsAdded(object sender, DataGridViewRowsAddedEventArgs e)
+        {
+            int total = 0;
+            foreach (DataGridViewRow row in dataGridView_order.Rows)
+            {
+                int harga = int.Parse(row.Cells[2].Value.ToString());
+                int qty = int.Parse(row.Cells[1].Value.ToString());
+                int subtotal = harga * qty;
+                total += subtotal;
+
+            }
+            label_total.Text = total.ToString();
+        }
+
+        private void dataGridView_order_Validated(object sender, EventArgs e)
+        {
+  
+        }
+
+        private void dataGridView_order_CellValueChanged(object sender, DataGridViewCellEventArgs e)
+        {
+            int total = 0;
+            foreach (DataGridViewRow row in dataGridView_order.Rows)
+            {
+                int harga = int.Parse(row.Cells[2].Value.ToString());
+                int qty = int.Parse(row.Cells[1].Value.ToString());
+                int subtotal = harga * qty;
+                total += subtotal;
+
+            }
+            label_total.Text = total.ToString();
         }
     }
 }

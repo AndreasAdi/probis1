@@ -39,12 +39,13 @@
             this.jFlatButton2 = new FlatButton.JFlatButton();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.lbl_total = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
             this.dataGridView_order = new System.Windows.Forms.DataGridView();
             this.Nama_menu = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.QTY = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Price = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label1 = new System.Windows.Forms.Label();
+            this.label_total = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_order)).BeginInit();
@@ -257,7 +258,8 @@
             // 
             this.panel3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel3.Controls.Add(this.lbl_total);
+            this.panel3.Controls.Add(this.label_total);
+            this.panel3.Controls.Add(this.label5);
             this.panel3.Controls.Add(this.dataGridView_order);
             this.panel3.Controls.Add(this.label1);
             this.panel3.Location = new System.Drawing.Point(1101, 86);
@@ -266,15 +268,15 @@
             this.panel3.Size = new System.Drawing.Size(609, 593);
             this.panel3.TabIndex = 10;
             // 
-            // lbl_total
+            // label5
             // 
-            this.lbl_total.AutoSize = true;
-            this.lbl_total.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_total.Location = new System.Drawing.Point(27, 530);
-            this.lbl_total.Name = "lbl_total";
-            this.lbl_total.Size = new System.Drawing.Size(167, 38);
-            this.lbl_total.TabIndex = 15;
-            this.lbl_total.Text = "Total : Rp ";
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(27, 530);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(167, 38);
+            this.label5.TabIndex = 15;
+            this.label5.Text = "Total : Rp ";
             // 
             // dataGridView_order
             // 
@@ -295,6 +297,9 @@
             this.dataGridView_order.Size = new System.Drawing.Size(416, 428);
             this.dataGridView_order.TabIndex = 14;
             this.dataGridView_order.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            this.dataGridView_order.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_order_CellValueChanged);
+            this.dataGridView_order.RowsAdded += new System.Windows.Forms.DataGridViewRowsAddedEventHandler(this.dataGridView_order_RowsAdded);
+            this.dataGridView_order.Validated += new System.EventHandler(this.dataGridView_order_Validated);
             // 
             // Nama_menu
             // 
@@ -326,6 +331,16 @@
             this.label1.Size = new System.Drawing.Size(116, 32);
             this.label1.TabIndex = 12;
             this.label1.Text = "ORDER";
+            // 
+            // label_total
+            // 
+            this.label_total.AutoSize = true;
+            this.label_total.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_total.Location = new System.Drawing.Point(200, 530);
+            this.label_total.Name = "label_total";
+            this.label_total.Size = new System.Drawing.Size(35, 38);
+            this.label_total.TabIndex = 16;
+            this.label_total.Text = "0";
             // 
             // add_order
             // 
@@ -364,7 +379,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Nama_menu;
         private System.Windows.Forms.DataGridViewTextBoxColumn QTY;
         private System.Windows.Forms.DataGridViewTextBoxColumn Price;
-        private System.Windows.Forms.Label lbl_total;
+        private System.Windows.Forms.Label label5;
         public System.Windows.Forms.DataGridView dataGridView_order;
+        private System.Windows.Forms.Label label_total;
     }
 }
