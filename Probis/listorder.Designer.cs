@@ -31,8 +31,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(listorder));
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.dataGridView_stock = new System.Windows.Forms.DataGridView();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.OrderNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Table = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.subtotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -40,6 +38,8 @@
             this.Total = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Status = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.view_detail = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_stock)).BeginInit();
             this.SuspendLayout();
@@ -47,9 +47,10 @@
             // pictureBox4
             // 
             this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
-            this.pictureBox4.Location = new System.Drawing.Point(-277, -4);
+            this.pictureBox4.Location = new System.Drawing.Point(-208, -3);
+            this.pictureBox4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(1938, 96);
+            this.pictureBox4.Size = new System.Drawing.Size(1454, 78);
             this.pictureBox4.TabIndex = 6;
             this.pictureBox4.TabStop = false;
             // 
@@ -67,32 +68,14 @@
             this.Total,
             this.Status,
             this.view_detail});
-            this.dataGridView_stock.Location = new System.Drawing.Point(-4, 180);
+            this.dataGridView_stock.Location = new System.Drawing.Point(-3, 146);
+            this.dataGridView_stock.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dataGridView_stock.Name = "dataGridView_stock";
             this.dataGridView_stock.ReadOnly = true;
             this.dataGridView_stock.RowHeadersWidth = 51;
             this.dataGridView_stock.RowTemplate.Height = 24;
-            this.dataGridView_stock.Size = new System.Drawing.Size(1344, 448);
+            this.dataGridView_stock.Size = new System.Drawing.Size(1008, 364);
             this.dataGridView_stock.TabIndex = 7;
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(270, 112);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(281, 33);
-            this.comboBox1.TabIndex = 8;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 25.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(12, 99);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(215, 52);
-            this.label1.TabIndex = 15;
-            this.label1.Text = "Order List";
             // 
             // OrderNumber
             // 
@@ -143,18 +126,41 @@
             this.view_detail.Name = "view_detail";
             this.view_detail.ReadOnly = true;
             // 
+            // comboBox1
+            // 
+            this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(202, 91);
+            this.comboBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(212, 28);
+            this.comboBox1.TabIndex = 8;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 25.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(9, 80);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(170, 39);
+            this.label1.TabIndex = 15;
+            this.label1.Text = "Order List";
+            // 
             // listorder
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1340, 626);
+            this.ClientSize = new System.Drawing.Size(1005, 509);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.dataGridView_stock);
             this.Controls.Add(this.pictureBox4);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "listorder";
             this.Text = "listorder";
+            this.Load += new System.EventHandler(this.listorder_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_stock)).EndInit();
             this.ResumeLayout(false);

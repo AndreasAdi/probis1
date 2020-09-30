@@ -46,5 +46,9 @@ namespace Probis
             conn.Close();
         }
 
+        private void add_stock_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

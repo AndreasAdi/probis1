@@ -16,5 +16,10 @@ namespace Probis
         {
             InitializeComponent();
         }
+
+        private void listorder_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
