@@ -109,7 +109,7 @@ namespace Probis
             conn.Open();
             //MessageBox.Show(DateTime.Now.ToShortDateString());
             int total = int.Parse(label_total.Text);
-            SqlCommand insertHeaderOrder = new SqlCommand("Insert into horder(jumlah_harga,tanggal) values(" + total + ",PARSE('" + DateTime.Now.ToShortDateString() + "' as date USING 'AR-LB'))", conn);
+            SqlCommand insertHeaderOrder = new SqlCommand("Insert into horder(jumlah_harga,tanggal,status) values(" + total + ",PARSE('" + DateTime.Now.ToShortDateString() + "' as date USING 'AR-LB'),0)", conn);
             SqlDataReader reader = insertHeaderOrder.ExecuteReader();
             reader.Close();
             SqlDataAdapter adp_IdHorder = new SqlDataAdapter("select id_horder from horder order by id_horder desc", conn);

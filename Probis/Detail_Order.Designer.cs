@@ -31,6 +31,10 @@
             this.lbl_no_order = new System.Windows.Forms.Label();
             this.dgv_detail_order = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
+            this.namaMenu = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.jumlah = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.hargaMenu = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btn_finish_order = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_detail_order)).BeginInit();
             this.SuspendLayout();
             // 
@@ -46,7 +50,14 @@
             // 
             // dgv_detail_order
             // 
+            this.dgv_detail_order.AllowUserToAddRows = false;
+            this.dgv_detail_order.AllowUserToDeleteRows = false;
+            this.dgv_detail_order.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgv_detail_order.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_detail_order.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.namaMenu,
+            this.jumlah,
+            this.hargaMenu});
             this.dgv_detail_order.Location = new System.Drawing.Point(31, 202);
             this.dgv_detail_order.Name = "dgv_detail_order";
             this.dgv_detail_order.RowHeadersWidth = 51;
@@ -64,17 +75,47 @@
             this.label1.TabIndex = 2;
             this.label1.Text = "Detail Order";
             // 
+            // namaMenu
+            // 
+            this.namaMenu.HeaderText = "Name";
+            this.namaMenu.MinimumWidth = 6;
+            this.namaMenu.Name = "namaMenu";
+            // 
+            // jumlah
+            // 
+            this.jumlah.HeaderText = "QTY";
+            this.jumlah.MinimumWidth = 6;
+            this.jumlah.Name = "jumlah";
+            // 
+            // hargaMenu
+            // 
+            this.hargaMenu.HeaderText = "Price";
+            this.hargaMenu.MinimumWidth = 6;
+            this.hargaMenu.Name = "hargaMenu";
+            // 
+            // btn_finish_order
+            // 
+            this.btn_finish_order.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_finish_order.Location = new System.Drawing.Point(861, 104);
+            this.btn_finish_order.Name = "btn_finish_order";
+            this.btn_finish_order.Size = new System.Drawing.Size(208, 57);
+            this.btn_finish_order.TabIndex = 3;
+            this.btn_finish_order.Text = "Finish Order";
+            this.btn_finish_order.UseVisualStyleBackColor = true;
+            // 
             // Detail_Order
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1105, 705);
+            this.Controls.Add(this.btn_finish_order);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dgv_detail_order);
             this.Controls.Add(this.lbl_no_order);
             this.Name = "Detail_Order";
             this.Text = "Detail_Order";
+            this.Load += new System.EventHandler(this.Detail_Order_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgv_detail_order)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -86,5 +127,9 @@
         private System.Windows.Forms.Label lbl_no_order;
         private System.Windows.Forms.DataGridView dgv_detail_order;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn namaMenu;
+        private System.Windows.Forms.DataGridViewTextBoxColumn jumlah;
+        private System.Windows.Forms.DataGridViewTextBoxColumn hargaMenu;
+        private System.Windows.Forms.Button btn_finish_order;
     }
 }

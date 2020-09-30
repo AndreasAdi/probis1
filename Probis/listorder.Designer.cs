@@ -31,15 +31,14 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(listorder));
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.dataGridView_stock = new System.Windows.Forms.DataGridView();
+            this.label1 = new System.Windows.Forms.Label();
             this.OrderNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Table = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.subtotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Tax = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Total = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Status = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.view_detail = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_stock)).BeginInit();
             this.SuspendLayout();
@@ -47,10 +46,10 @@
             // pictureBox4
             // 
             this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
-            this.pictureBox4.Location = new System.Drawing.Point(-208, -3);
-            this.pictureBox4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox4.Location = new System.Drawing.Point(-277, -4);
+            this.pictureBox4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(1454, 78);
+            this.pictureBox4.Size = new System.Drawing.Size(1939, 96);
             this.pictureBox4.TabIndex = 6;
             this.pictureBox4.TabStop = false;
             // 
@@ -66,16 +65,26 @@
             this.subtotal,
             this.Tax,
             this.Total,
-            this.Status,
-            this.view_detail});
-            this.dataGridView_stock.Location = new System.Drawing.Point(-3, 146);
-            this.dataGridView_stock.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Status});
+            this.dataGridView_stock.Location = new System.Drawing.Point(-4, 180);
+            this.dataGridView_stock.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dataGridView_stock.Name = "dataGridView_stock";
             this.dataGridView_stock.ReadOnly = true;
             this.dataGridView_stock.RowHeadersWidth = 51;
             this.dataGridView_stock.RowTemplate.Height = 24;
-            this.dataGridView_stock.Size = new System.Drawing.Size(1008, 364);
+            this.dataGridView_stock.Size = new System.Drawing.Size(1344, 448);
             this.dataGridView_stock.TabIndex = 7;
+            this.dataGridView_stock.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_stock_CellClick);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 25.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(12, 114);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(210, 51);
+            this.label1.TabIndex = 15;
+            this.label1.Text = "Order List";
             // 
             // OrderNumber
             // 
@@ -119,45 +128,25 @@
             this.Status.Name = "Status";
             this.Status.ReadOnly = true;
             // 
-            // view_detail
+            // dateTimePicker1
             // 
-            this.view_detail.HeaderText = "Vew detail";
-            this.view_detail.MinimumWidth = 6;
-            this.view_detail.Name = "view_detail";
-            this.view_detail.ReadOnly = true;
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(202, 91);
-            this.comboBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(212, 28);
-            this.comboBox1.TabIndex = 8;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 25.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(9, 80);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(170, 39);
-            this.label1.TabIndex = 15;
-            this.label1.Text = "Order List";
+            this.dateTimePicker1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateTimePicker1.Location = new System.Drawing.Point(247, 130);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(334, 30);
+            this.dateTimePicker1.TabIndex = 16;
             // 
             // listorder
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1005, 509);
+            this.ClientSize = new System.Drawing.Size(1340, 626);
+            this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.dataGridView_stock);
             this.Controls.Add(this.pictureBox4);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "listorder";
             this.Text = "listorder";
             this.Load += new System.EventHandler(this.listorder_Load);
@@ -172,7 +161,6 @@
 
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.DataGridView dataGridView_stock;
-        private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridViewTextBoxColumn OrderNumber;
         private System.Windows.Forms.DataGridViewTextBoxColumn Table;
@@ -180,6 +168,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Tax;
         private System.Windows.Forms.DataGridViewTextBoxColumn Total;
         private System.Windows.Forms.DataGridViewTextBoxColumn Status;
-        private System.Windows.Forms.DataGridViewButtonColumn view_detail;
+        private System.Windows.Forms.DateTimePicker dateTimePicker1;
     }
 }
