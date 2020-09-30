@@ -34,6 +34,8 @@
             this.pictureBox_coffe = new System.Windows.Forms.PictureBox();
             this.numericUpDown_jumlah = new System.Windows.Forms.NumericUpDown();
             this.button_add = new System.Windows.Forms.Button();
+            this.namaMenu = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.hargaMenu = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_desert)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_coffe)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_jumlah)).BeginInit();
@@ -56,39 +58,59 @@
             this.dataGridView_desert.AllowUserToDeleteRows = false;
             this.dataGridView_desert.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView_desert.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView_desert.Location = new System.Drawing.Point(375, 130);
+            this.dataGridView_desert.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.namaMenu,
+            this.hargaMenu});
+            this.dataGridView_desert.Location = new System.Drawing.Point(72, 120);
             this.dataGridView_desert.Name = "dataGridView_desert";
             this.dataGridView_desert.ReadOnly = true;
             this.dataGridView_desert.RowHeadersWidth = 51;
             this.dataGridView_desert.RowTemplate.Height = 24;
-            this.dataGridView_desert.Size = new System.Drawing.Size(416, 397);
+            this.dataGridView_desert.Size = new System.Drawing.Size(571, 397);
             this.dataGridView_desert.TabIndex = 2;
+            this.dataGridView_desert.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_desert_CellClick);
             // 
             // pictureBox_coffe
             // 
             this.pictureBox_coffe.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox_coffe.Image")));
-            this.pictureBox_coffe.Location = new System.Drawing.Point(72, 130);
+            this.pictureBox_coffe.Location = new System.Drawing.Point(665, 120);
             this.pictureBox_coffe.Name = "pictureBox_coffe";
-            this.pictureBox_coffe.Size = new System.Drawing.Size(297, 397);
+            this.pictureBox_coffe.Size = new System.Drawing.Size(297, 269);
             this.pictureBox_coffe.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox_coffe.TabIndex = 11;
             this.pictureBox_coffe.TabStop = false;
             // 
             // numericUpDown_jumlah
             // 
-            this.numericUpDown_jumlah.Location = new System.Drawing.Point(811, 263);
+            this.numericUpDown_jumlah.Location = new System.Drawing.Point(665, 395);
             this.numericUpDown_jumlah.Name = "numericUpDown_jumlah";
-            this.numericUpDown_jumlah.Size = new System.Drawing.Size(214, 22);
+            this.numericUpDown_jumlah.Size = new System.Drawing.Size(297, 22);
             this.numericUpDown_jumlah.TabIndex = 15;
+            this.numericUpDown_jumlah.ValueChanged += new System.EventHandler(this.numericUpDown_jumlah_ValueChanged);
             // 
             // button_add
             // 
-            this.button_add.Location = new System.Drawing.Point(811, 301);
+            this.button_add.Location = new System.Drawing.Point(665, 423);
             this.button_add.Name = "button_add";
-            this.button_add.Size = new System.Drawing.Size(214, 68);
+            this.button_add.Size = new System.Drawing.Size(297, 25);
             this.button_add.TabIndex = 14;
             this.button_add.Text = "Add";
             this.button_add.UseVisualStyleBackColor = true;
+            this.button_add.Click += new System.EventHandler(this.button_add_Click);
+            // 
+            // namaMenu
+            // 
+            this.namaMenu.HeaderText = "Name";
+            this.namaMenu.MinimumWidth = 6;
+            this.namaMenu.Name = "namaMenu";
+            this.namaMenu.ReadOnly = true;
+            // 
+            // hargaMenu
+            // 
+            this.hargaMenu.HeaderText = "Price";
+            this.hargaMenu.MinimumWidth = 6;
+            this.hargaMenu.Name = "hargaMenu";
+            this.hargaMenu.ReadOnly = true;
             // 
             // desert
             // 
@@ -119,5 +141,7 @@
         private System.Windows.Forms.PictureBox pictureBox_coffe;
         private System.Windows.Forms.NumericUpDown numericUpDown_jumlah;
         private System.Windows.Forms.Button button_add;
+        private System.Windows.Forms.DataGridViewTextBoxColumn namaMenu;
+        private System.Windows.Forms.DataGridViewTextBoxColumn hargaMenu;
     }
 }

@@ -135,6 +135,12 @@
     <Compile Include="desert.Designer.cs">
       <DependentUpon>desert.cs</DependentUpon>
     </Compile>
+    <Compile Include="Detail_Order.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Detail_Order.Designer.cs">
+      <DependentUpon>Detail_Order.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -187,6 +193,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="desert.resx">
       <DependentUpon>desert.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Detail_Order.resx">
+      <DependentUpon>Detail_Order.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>

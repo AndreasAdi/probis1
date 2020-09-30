@@ -30,46 +30,17 @@ namespace Probis
         private void Coffee_Load(object sender, EventArgs e)
         {
             conn = new SqlConnection(connection);
-            load_dg_kopi();
-        }
-
-        public void load_dg_kopi()
-        {
-            string pathgambar="";
-            //Comment test Commit
             conn.Open();
-            dataGridView_kopi.Rows.Clear();
 
-            SqlCommand querypathgambar = new SqlCommand("Select path_gambar from menu where id_menu =1",conn);
+            // Load data ke DataGridview
+            string query = "Select nama,harga from menu where tipe_menu =1";
+            loaddgv(query, dataGridView_kopi);
 
-            SqlDataReader r = querypathgambar.ExecuteReader();
+            // Load Gambar ke picture box
+            string querygambar = "Select path_gambar from menu where id_menu =1";
+            loadgambar(querygambar, pictureBox_coffe);
 
-            if (r.Read())
-            {
-               pathgambar = r.GetString(0);
-
-                //MessageBox.Show(pathgambar);
-                r.Close();
-            }
-         
-            //var stream = myImage.ToStream(Application.StartupPath + "\\" + pathgambar);
-            pictureBox_coffe.Image = Image.FromFile(Application.StartupPath+"\\"+pathgambar);
-
-
-            string querySelectStock = "Select nama,harga from menu where tipe_menu =1";
-            kopiadapter = new SqlDataAdapter(querySelectStock, conn);
-            DataSet kopidata = new DataSet();
-            kopiadapter.Fill(kopidata);
-            dataGridView_kopi.DataSource = kopidata.Tables[0];
-            dataGridView_kopi.Refresh();
             conn.Close();
-        }
-
-        private void dataGridView_kopi_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
-        {
-            nama_menu = dataGridView_kopi.Rows[e.RowIndex].Cells[0].Value.ToString();
-            harga = dataGridView_kopi.Rows[e.RowIndex].Cells[1].Value.ToString();
-           
         }
 
         private void button_add_Click(object sender, EventArgs e)
@@ -83,7 +54,61 @@ namespace Probis
 
         private void dataGridView_kopi_CellClick(object sender, DataGridViewCellEventArgs e)
         {
+            if (e.RowIndex>=0)
+            {
+                conn.Open();
+                nama_menu = dataGridView_kopi.Rows[e.RowIndex].Cells[0].Value.ToString();
+                harga = dataGridView_kopi.Rows[e.RowIndex].Cells[1].Value.ToString();
 
+                string querygambar = "Select path_gambar from menu where nama = '" + nama_menu + "'";
+
+                loadgambar(querygambar, pictureBox_coffe);
+                conn.Close();
+            }
+           
         }
+        
+        //Fungsi buat load data ke data gridview 
+        private void loaddgv(string query,DataGridView dgv)
+        {
+            dgv.Rows.Clear();
+            SqlCommand comm = new SqlCommand(query, conn);
+
+            SqlDataReader reader = comm.ExecuteReader();
+
+            List<string> listmenu = new List<string>();
+            List<string> listharga = new List<string>();
+
+            while (reader.Read())
+            {
+                listmenu.Add(reader.GetValue(0).ToString());
+                listharga.Add(reader.GetValue(1).ToString());
+            }
+            reader.Close();
+
+            for (int i = 0; i < listmenu.Count; i++)
+            {
+                dgv.Rows.Add(listmenu[i], listharga[i]);
+            }
+        }
+
+        //Fungsi buat load gambar ke picture box 
+        private void loadgambar(string query,PictureBox p)
+        {
+            string pathgambar = "";
+
+            SqlCommand querypathgambar = new SqlCommand(query, conn);
+
+            SqlDataReader r = querypathgambar.ExecuteReader();
+
+            if (r.Read())
+            {
+                pathgambar = r.GetString(0);
+                r.Close();
+            }
+
+            p.Image = Image.FromFile(Application.StartupPath+"\\"+pathgambar);
+        }
+
     }
 }

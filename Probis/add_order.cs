@@ -47,17 +47,17 @@ namespace Probis
 
         private void jFlatButton2_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new beverage());
+            OpenChildForm(new beverage(this));
         }
 
         private void jFlatButton3_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new desert());
+            OpenChildForm(new desert(this));
         }
 
         private void jFlatButton4_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new snack());
+            OpenChildForm(new snack(this));
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
