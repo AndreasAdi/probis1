@@ -29,6 +29,7 @@ namespace Probis
 
         private void Coffee_Load(object sender, EventArgs e)
         {
+            notes.Text = "Catatan";
             conn = new SqlConnection(connection);
             conn.Open();
 
@@ -77,7 +78,8 @@ namespace Probis
                 addorder.dataGridView_order.Rows.Add(nama_menu, qty, harga);
             }
 
-
+            notes.Text = "";
+            numericUpDown_jumlah.Value = 0;
         }
 
         private void dataGridView_kopi_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -138,5 +140,21 @@ namespace Probis
             p.Image = Image.FromFile(Application.StartupPath+"\\"+pathgambar);
         }
 
+        private void notes_Enter(object sender, EventArgs e)
+        {
+            if (notes.Text=="Catatan")
+            {
+                notes.Text = "";
+            }
+          
+        }
+
+        private void notes_Leave(object sender, EventArgs e)
+        {
+            if (notes.Text=="")
+            {
+                notes.Text = "Catatan";
+            }
+        }
     }
 }

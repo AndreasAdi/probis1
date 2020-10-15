@@ -132,6 +132,19 @@ namespace Probis
             }
             readerInsertdetail.Close();
             conn.Close();
+            MessageBox.Show("Berhasil add order !");
+            this.Close();
         }
+
+        private void add_order_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            openform(new Form_kasir());
+        }
+
+        private void openform(Form f)
+        {
+            f.Show();
+        }
+
     }
 }

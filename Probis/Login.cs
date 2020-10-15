@@ -79,5 +79,15 @@ namespace Probis
         {
 
         }
+
+        private void label_username_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox_username_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
