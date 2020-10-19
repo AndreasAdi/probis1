@@ -133,5 +133,22 @@ namespace Probis
 
            
         }
+
+        private void notes_Enter(object sender, EventArgs e)
+        {
+            if (notes.Text == "Catatan")
+            {
+                notes.Text = "";
+            }
+
+        }
+
+        private void notes_Leave(object sender, EventArgs e)
+        {
+            if (notes.Text == "")
+            {
+                notes.Text = "Catatan";
+            }
+        }
     }
 }

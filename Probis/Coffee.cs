@@ -32,7 +32,7 @@ namespace Probis
         private void Coffee_Load(object sender, EventArgs e)
         {
 
-    
+            dataGridView_kopi.Columns[1].DefaultCellStyle.Format = "0.00##";
             notes.Text = "Catatan";
             conn = new SqlConnection(connection);
             conn.Open();
@@ -167,11 +167,10 @@ namespace Probis
         }
 
 
+
         private void dataGridView_kopi_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
         {
-            DataGridViewCell cell = dataGridView_kopi.Rows[e.RowIndex].Cells[e.ColumnIndex];
 
-            MessageBox.Show("Test");
 
         }
     }

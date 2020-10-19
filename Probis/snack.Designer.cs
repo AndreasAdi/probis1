@@ -28,15 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(snack));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label1 = new System.Windows.Forms.Label();
             this.dataGridView_snack = new System.Windows.Forms.DataGridView();
+            this.namaMenu = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.hargaMenu = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pictureBox_coffe = new System.Windows.Forms.PictureBox();
             this.numericUpDown_jumlah = new System.Windows.Forms.NumericUpDown();
             this.button_add = new System.Windows.Forms.Button();
-            this.namaMenu = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.hargaMenu = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.notes = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_snack)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_coffe)).BeginInit();
@@ -66,9 +66,25 @@
             this.dataGridView_snack.Name = "dataGridView_snack";
             this.dataGridView_snack.RowHeadersWidth = 51;
             this.dataGridView_snack.RowTemplate.Height = 24;
-            this.dataGridView_snack.Size = new System.Drawing.Size(571, 504);
+            this.dataGridView_snack.Size = new System.Drawing.Size(571, 489);
             this.dataGridView_snack.TabIndex = 4;
             this.dataGridView_snack.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_snack_CellClick);
+            // 
+            // namaMenu
+            // 
+            this.namaMenu.HeaderText = "Name";
+            this.namaMenu.MinimumWidth = 6;
+            this.namaMenu.Name = "namaMenu";
+            this.namaMenu.ReadOnly = true;
+            // 
+            // hargaMenu
+            // 
+            dataGridViewCellStyle1.Format = "C2";
+            dataGridViewCellStyle1.NullValue = null;
+            this.hargaMenu.DefaultCellStyle = dataGridViewCellStyle1;
+            this.hargaMenu.HeaderText = "Price";
+            this.hargaMenu.MinimumWidth = 6;
+            this.hargaMenu.Name = "hargaMenu";
             // 
             // pictureBox_coffe
             // 
@@ -82,14 +98,14 @@
             // 
             // numericUpDown_jumlah
             // 
-            this.numericUpDown_jumlah.Location = new System.Drawing.Point(665, 410);
+            this.numericUpDown_jumlah.Location = new System.Drawing.Point(665, 395);
             this.numericUpDown_jumlah.Name = "numericUpDown_jumlah";
             this.numericUpDown_jumlah.Size = new System.Drawing.Size(297, 22);
             this.numericUpDown_jumlah.TabIndex = 13;
             // 
             // button_add
             // 
-            this.button_add.Location = new System.Drawing.Point(665, 589);
+            this.button_add.Location = new System.Drawing.Point(665, 574);
             this.button_add.Name = "button_add";
             this.button_add.Size = new System.Drawing.Size(297, 35);
             this.button_add.TabIndex = 12;
@@ -97,29 +113,15 @@
             this.button_add.UseVisualStyleBackColor = true;
             this.button_add.Click += new System.EventHandler(this.button_add_Click);
             // 
-            // namaMenu
-            // 
-            this.namaMenu.HeaderText = "Name";
-            this.namaMenu.MinimumWidth = 6;
-            this.namaMenu.Name = "namaMenu";
-            this.namaMenu.ReadOnly = true;
-            // 
-            // hargaMenu
-            // 
-            dataGridViewCellStyle3.Format = "C2";
-            dataGridViewCellStyle3.NullValue = null;
-            this.hargaMenu.DefaultCellStyle = dataGridViewCellStyle3;
-            this.hargaMenu.HeaderText = "Price";
-            this.hargaMenu.MinimumWidth = 6;
-            this.hargaMenu.Name = "hargaMenu";
-            // 
             // notes
             // 
-            this.notes.Location = new System.Drawing.Point(665, 438);
+            this.notes.Location = new System.Drawing.Point(665, 423);
             this.notes.Multiline = true;
             this.notes.Name = "notes";
             this.notes.Size = new System.Drawing.Size(297, 145);
             this.notes.TabIndex = 14;
+            this.notes.Enter += new System.EventHandler(this.notes_Enter);
+            this.notes.Leave += new System.EventHandler(this.notes_Leave);
             // 
             // snack
             // 

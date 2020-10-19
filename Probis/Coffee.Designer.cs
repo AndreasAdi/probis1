@@ -56,6 +56,7 @@
             this.hargaMenu});
             this.dataGridView_kopi.Location = new System.Drawing.Point(72, 120);
             this.dataGridView_kopi.Name = "dataGridView_kopi";
+            this.dataGridView_kopi.ReadOnly = true;
             this.dataGridView_kopi.RowHeadersWidth = 51;
             this.dataGridView_kopi.RowTemplate.Height = 24;
             this.dataGridView_kopi.Size = new System.Drawing.Size(571, 482);
@@ -118,16 +119,18 @@
             this.namaMenu.HeaderText = "Name";
             this.namaMenu.MinimumWidth = 6;
             this.namaMenu.Name = "namaMenu";
+            this.namaMenu.ReadOnly = true;
             // 
             // hargaMenu
             // 
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.Format = "C2";
+            dataGridViewCellStyle2.Format = "C";
             dataGridViewCellStyle2.NullValue = "0";
             this.hargaMenu.DefaultCellStyle = dataGridViewCellStyle2;
             this.hargaMenu.HeaderText = "Price";
             this.hargaMenu.MinimumWidth = 6;
             this.hargaMenu.Name = "hargaMenu";
+            this.hargaMenu.ReadOnly = true;
             // 
             // Coffee
             // 

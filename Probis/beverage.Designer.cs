@@ -36,6 +36,7 @@
             this.pictureBox_coffe = new System.Windows.Forms.PictureBox();
             this.numericUpDown_jumlah = new System.Windows.Forms.NumericUpDown();
             this.button_add = new System.Windows.Forms.Button();
+            this.notes = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_berverages)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_coffe)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_jumlah)).BeginInit();
@@ -55,7 +56,7 @@
             this.dataGridView_berverages.ReadOnly = true;
             this.dataGridView_berverages.RowHeadersWidth = 51;
             this.dataGridView_berverages.RowTemplate.Height = 24;
-            this.dataGridView_berverages.Size = new System.Drawing.Size(571, 397);
+            this.dataGridView_berverages.Size = new System.Drawing.Size(571, 482);
             this.dataGridView_berverages.TabIndex = 0;
             this.dataGridView_berverages.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_berverages_CellClick);
             // 
@@ -103,7 +104,7 @@
             // 
             // button_add
             // 
-            this.button_add.Location = new System.Drawing.Point(665, 423);
+            this.button_add.Location = new System.Drawing.Point(665, 574);
             this.button_add.Name = "button_add";
             this.button_add.Size = new System.Drawing.Size(297, 28);
             this.button_add.TabIndex = 12;
@@ -111,12 +112,23 @@
             this.button_add.UseVisualStyleBackColor = true;
             this.button_add.Click += new System.EventHandler(this.button_add_Click);
             // 
+            // notes
+            // 
+            this.notes.Location = new System.Drawing.Point(665, 423);
+            this.notes.Multiline = true;
+            this.notes.Name = "notes";
+            this.notes.Size = new System.Drawing.Size(297, 145);
+            this.notes.TabIndex = 14;
+            this.notes.Enter += new System.EventHandler(this.notes_Enter);
+            this.notes.Leave += new System.EventHandler(this.notes_Leave);
+            // 
             // beverage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1080, 546);
+            this.ClientSize = new System.Drawing.Size(1080, 643);
+            this.Controls.Add(this.notes);
             this.Controls.Add(this.numericUpDown_jumlah);
             this.Controls.Add(this.button_add);
             this.Controls.Add(this.pictureBox_coffe);
@@ -142,5 +154,6 @@
         private System.Windows.Forms.Button button_add;
         private System.Windows.Forms.DataGridViewTextBoxColumn namaMenu;
         private System.Windows.Forms.DataGridViewTextBoxColumn hargaMenu;
+        private System.Windows.Forms.TextBox notes;
     }
 }
