@@ -19,7 +19,7 @@ namespace Probis
         SqlDataAdapter kopiadapter;
         string nama_menu = "";
         string harga = "";
-
+        public static string catatan="";
         private add_order addorder;
         public Coffee(add_order add_Order)
         {
@@ -52,7 +52,6 @@ namespace Probis
 
         private void button_add_Click(object sender, EventArgs e)
         {
-
             string qty = numericUpDown_jumlah.Value.ToString();
             bool ada = false;
 
@@ -83,7 +82,7 @@ namespace Probis
             {
                 addorder.dataGridView_order.Rows.Add(nama_menu, qty, harga);
             }
-
+            catatan = catatan+notes.Text+"|";
             notes.Text = "";
             numericUpDown_jumlah.Value = 0;
         }
