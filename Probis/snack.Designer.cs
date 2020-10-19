@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(snack));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label1 = new System.Windows.Forms.Label();
             this.dataGridView_snack = new System.Windows.Forms.DataGridView();
             this.pictureBox_coffe = new System.Windows.Forms.PictureBox();
@@ -36,6 +37,7 @@
             this.button_add = new System.Windows.Forms.Button();
             this.namaMenu = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.hargaMenu = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.notes = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_snack)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_coffe)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_jumlah)).BeginInit();
@@ -62,10 +64,9 @@
             this.hargaMenu});
             this.dataGridView_snack.Location = new System.Drawing.Point(72, 120);
             this.dataGridView_snack.Name = "dataGridView_snack";
-            this.dataGridView_snack.ReadOnly = true;
             this.dataGridView_snack.RowHeadersWidth = 51;
             this.dataGridView_snack.RowTemplate.Height = 24;
-            this.dataGridView_snack.Size = new System.Drawing.Size(571, 397);
+            this.dataGridView_snack.Size = new System.Drawing.Size(571, 504);
             this.dataGridView_snack.TabIndex = 4;
             this.dataGridView_snack.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_snack_CellClick);
             // 
@@ -88,7 +89,7 @@
             // 
             // button_add
             // 
-            this.button_add.Location = new System.Drawing.Point(665, 438);
+            this.button_add.Location = new System.Drawing.Point(665, 589);
             this.button_add.Name = "button_add";
             this.button_add.Size = new System.Drawing.Size(297, 35);
             this.button_add.TabIndex = 12;
@@ -105,17 +106,28 @@
             // 
             // hargaMenu
             // 
+            dataGridViewCellStyle3.Format = "C2";
+            dataGridViewCellStyle3.NullValue = null;
+            this.hargaMenu.DefaultCellStyle = dataGridViewCellStyle3;
             this.hargaMenu.HeaderText = "Price";
             this.hargaMenu.MinimumWidth = 6;
             this.hargaMenu.Name = "hargaMenu";
-            this.hargaMenu.ReadOnly = true;
+            // 
+            // notes
+            // 
+            this.notes.Location = new System.Drawing.Point(665, 438);
+            this.notes.Multiline = true;
+            this.notes.Name = "notes";
+            this.notes.Size = new System.Drawing.Size(297, 145);
+            this.notes.TabIndex = 14;
             // 
             // snack
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1080, 546);
+            this.ClientSize = new System.Drawing.Size(1080, 641);
+            this.Controls.Add(this.notes);
             this.Controls.Add(this.numericUpDown_jumlah);
             this.Controls.Add(this.button_add);
             this.Controls.Add(this.pictureBox_coffe);
@@ -141,5 +153,6 @@
         private System.Windows.Forms.Button button_add;
         private System.Windows.Forms.DataGridViewTextBoxColumn namaMenu;
         private System.Windows.Forms.DataGridViewTextBoxColumn hargaMenu;
+        private System.Windows.Forms.TextBox notes;
     }
 }

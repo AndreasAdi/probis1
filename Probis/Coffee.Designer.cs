@@ -29,14 +29,16 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Coffee));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dataGridView_kopi = new System.Windows.Forms.DataGridView();
-            this.namaMenu = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.hargaMenu = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox_coffe = new System.Windows.Forms.PictureBox();
             this.button_add = new System.Windows.Forms.Button();
             this.numericUpDown_jumlah = new System.Windows.Forms.NumericUpDown();
             this.notes = new System.Windows.Forms.TextBox();
+            this.namaMenu = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.hargaMenu = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_kopi)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_coffe)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_jumlah)).BeginInit();
@@ -47,32 +49,19 @@
             this.dataGridView_kopi.AllowUserToAddRows = false;
             this.dataGridView_kopi.AllowUserToDeleteRows = false;
             this.dataGridView_kopi.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridView_kopi.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.dataGridView_kopi.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView_kopi.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.namaMenu,
             this.hargaMenu});
             this.dataGridView_kopi.Location = new System.Drawing.Point(72, 120);
             this.dataGridView_kopi.Name = "dataGridView_kopi";
-            this.dataGridView_kopi.ReadOnly = true;
             this.dataGridView_kopi.RowHeadersWidth = 51;
             this.dataGridView_kopi.RowTemplate.Height = 24;
             this.dataGridView_kopi.Size = new System.Drawing.Size(571, 482);
             this.dataGridView_kopi.TabIndex = 7;
             this.dataGridView_kopi.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_kopi_CellClick);
-            // 
-            // namaMenu
-            // 
-            this.namaMenu.HeaderText = "Name";
-            this.namaMenu.MinimumWidth = 6;
-            this.namaMenu.Name = "namaMenu";
-            this.namaMenu.ReadOnly = true;
-            // 
-            // hargaMenu
-            // 
-            this.hargaMenu.HeaderText = "Price";
-            this.hargaMenu.MinimumWidth = 6;
-            this.hargaMenu.Name = "hargaMenu";
-            this.hargaMenu.ReadOnly = true;
+            this.dataGridView_kopi.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dataGridView_kopi_CellFormatting);
             // 
             // label1
             // 
@@ -121,6 +110,25 @@
             this.notes.Enter += new System.EventHandler(this.notes_Enter);
             this.notes.Leave += new System.EventHandler(this.notes_Leave);
             // 
+            // namaMenu
+            // 
+            dataGridViewCellStyle1.Format = "C0";
+            dataGridViewCellStyle1.NullValue = null;
+            this.namaMenu.DefaultCellStyle = dataGridViewCellStyle1;
+            this.namaMenu.HeaderText = "Name";
+            this.namaMenu.MinimumWidth = 6;
+            this.namaMenu.Name = "namaMenu";
+            // 
+            // hargaMenu
+            // 
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.Format = "C2";
+            dataGridViewCellStyle2.NullValue = "0";
+            this.hargaMenu.DefaultCellStyle = dataGridViewCellStyle2;
+            this.hargaMenu.HeaderText = "Price";
+            this.hargaMenu.MinimumWidth = 6;
+            this.hargaMenu.Name = "hargaMenu";
+            // 
             // Coffee
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -151,8 +159,8 @@
         private System.Windows.Forms.PictureBox pictureBox_coffe;
         private System.Windows.Forms.Button button_add;
         private System.Windows.Forms.NumericUpDown numericUpDown_jumlah;
+        private System.Windows.Forms.TextBox notes;
         private System.Windows.Forms.DataGridViewTextBoxColumn namaMenu;
         private System.Windows.Forms.DataGridViewTextBoxColumn hargaMenu;
-        private System.Windows.Forms.TextBox notes;
     }
 }

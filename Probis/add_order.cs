@@ -82,7 +82,7 @@ namespace Probis
                 total += subtotal;
 
             }
-            label_total.Text = total.ToString();
+            label_total.Text = total.ToString("#,##0.00");
         }
 
         private void dataGridView_order_Validated(object sender, EventArgs e)
@@ -101,7 +101,7 @@ namespace Probis
                 total += subtotal;
 
             }
-            label_total.Text = total.ToString();
+            label_total.Text = total.ToString("#,##0.00");
         }
 
         private void jFlatButton5_Click(object sender, EventArgs e)

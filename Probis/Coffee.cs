@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -22,13 +23,16 @@ namespace Probis
         private add_order addorder;
         public Coffee(add_order add_Order)
         {
-
+           
             InitializeComponent();
             this.addorder = add_Order;
+         
         }
 
         private void Coffee_Load(object sender, EventArgs e)
         {
+
+    
             notes.Text = "Catatan";
             conn = new SqlConnection(connection);
             conn.Open();
@@ -42,6 +46,8 @@ namespace Probis
             loadgambar(querygambar, pictureBox_coffe);
 
             conn.Close();
+
+            
         }
 
         private void button_add_Click(object sender, EventArgs e)
@@ -120,6 +126,9 @@ namespace Probis
             {
                 dgv.Rows.Add(listmenu[i], listharga[i]);
             }
+
+
+        
         }
 
         //Fungsi buat load gambar ke picture box 
@@ -155,6 +164,15 @@ namespace Probis
             {
                 notes.Text = "Catatan";
             }
+        }
+
+
+        private void dataGridView_kopi_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
+        {
+            DataGridViewCell cell = dataGridView_kopi.Rows[e.RowIndex].Cells[e.ColumnIndex];
+
+            MessageBox.Show("Test");
+
         }
     }
 }
