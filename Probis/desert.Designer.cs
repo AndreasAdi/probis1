@@ -46,9 +46,10 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(64, 65);
+            this.label1.Location = new System.Drawing.Point(48, 53);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(137, 46);
+            this.label1.Size = new System.Drawing.Size(110, 37);
             this.label1.TabIndex = 3;
             this.label1.Text = "Desert";
             this.label1.Click += new System.EventHandler(this.label1_Click);
@@ -62,12 +63,13 @@
             this.dataGridView_desert.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.namaMenu,
             this.hargaMenu});
-            this.dataGridView_desert.Location = new System.Drawing.Point(72, 120);
+            this.dataGridView_desert.Location = new System.Drawing.Point(54, 98);
+            this.dataGridView_desert.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dataGridView_desert.Name = "dataGridView_desert";
             this.dataGridView_desert.ReadOnly = true;
             this.dataGridView_desert.RowHeadersWidth = 51;
             this.dataGridView_desert.RowTemplate.Height = 24;
-            this.dataGridView_desert.Size = new System.Drawing.Size(571, 481);
+            this.dataGridView_desert.Size = new System.Drawing.Size(428, 391);
             this.dataGridView_desert.TabIndex = 2;
             this.dataGridView_desert.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_desert_CellClick);
             // 
@@ -88,26 +90,29 @@
             // pictureBox_coffe
             // 
             this.pictureBox_coffe.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox_coffe.Image")));
-            this.pictureBox_coffe.Location = new System.Drawing.Point(665, 120);
+            this.pictureBox_coffe.Location = new System.Drawing.Point(499, 98);
+            this.pictureBox_coffe.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBox_coffe.Name = "pictureBox_coffe";
-            this.pictureBox_coffe.Size = new System.Drawing.Size(297, 269);
+            this.pictureBox_coffe.Size = new System.Drawing.Size(223, 219);
             this.pictureBox_coffe.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox_coffe.TabIndex = 11;
             this.pictureBox_coffe.TabStop = false;
             // 
             // numericUpDown_jumlah
             // 
-            this.numericUpDown_jumlah.Location = new System.Drawing.Point(665, 395);
+            this.numericUpDown_jumlah.Location = new System.Drawing.Point(499, 321);
+            this.numericUpDown_jumlah.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.numericUpDown_jumlah.Name = "numericUpDown_jumlah";
-            this.numericUpDown_jumlah.Size = new System.Drawing.Size(297, 22);
+            this.numericUpDown_jumlah.Size = new System.Drawing.Size(223, 20);
             this.numericUpDown_jumlah.TabIndex = 15;
             this.numericUpDown_jumlah.ValueChanged += new System.EventHandler(this.numericUpDown_jumlah_ValueChanged);
             // 
             // button_add
             // 
-            this.button_add.Location = new System.Drawing.Point(665, 576);
+            this.button_add.Location = new System.Drawing.Point(499, 468);
+            this.button_add.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button_add.Name = "button_add";
-            this.button_add.Size = new System.Drawing.Size(297, 25);
+            this.button_add.Size = new System.Drawing.Size(223, 20);
             this.button_add.TabIndex = 14;
             this.button_add.Text = "Add";
             this.button_add.UseVisualStyleBackColor = true;
@@ -115,26 +120,28 @@
             // 
             // notes
             // 
-            this.notes.Location = new System.Drawing.Point(665, 425);
+            this.notes.Location = new System.Drawing.Point(499, 345);
+            this.notes.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.notes.Multiline = true;
             this.notes.Name = "notes";
-            this.notes.Size = new System.Drawing.Size(297, 145);
+            this.notes.Size = new System.Drawing.Size(224, 119);
             this.notes.TabIndex = 16;
             this.notes.Enter += new System.EventHandler(this.notes_Enter);
             this.notes.Leave += new System.EventHandler(this.notes_Leave);
             // 
             // desert
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1080, 635);
+            this.ClientSize = new System.Drawing.Size(810, 516);
             this.Controls.Add(this.notes);
             this.Controls.Add(this.numericUpDown_jumlah);
             this.Controls.Add(this.button_add);
             this.Controls.Add(this.pictureBox_coffe);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dataGridView_desert);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "desert";
             this.Text = "desert";
             this.Load += new System.EventHandler(this.desert_Load);
@@ -155,6 +162,6 @@
         private System.Windows.Forms.Button button_add;
         private System.Windows.Forms.DataGridViewTextBoxColumn namaMenu;
         private System.Windows.Forms.DataGridViewTextBoxColumn hargaMenu;
-        private System.Windows.Forms.TextBox notes;
+        public System.Windows.Forms.TextBox notes;
     }
 }

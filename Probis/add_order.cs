@@ -107,9 +107,12 @@ namespace Probis
         private void jFlatButton5_Click(object sender, EventArgs e)
         {
             conn.Open();
+            //MessageBox.Show(Coffee.catatan);
             //MessageBox.Show(DateTime.Now.ToShortDateString());
-            int total = int.Parse(label_total.Text);
-            SqlCommand insertHeaderOrder = new SqlCommand("Insert into horder(jumlah_harga,tanggal,status) values(" + total + ",PARSE('" + DateTime.Now.ToShortDateString() + "' as date USING 'AR-LB'),0)", conn);
+            string justDigits = new string(label_total.Text.Where(char.IsDigit).ToArray());
+            int total = int.Parse(justDigits);
+            //MessageBox.Show(total.ToString());
+            SqlCommand insertHeaderOrder = new SqlCommand("Insert into horder(jumlah_harga,tanggal,status,catatan) values(" + total + ",PARSE('" + DateTime.Now.ToShortDateString() + "' as date USING 'AR-LB'),0,'"+Coffee.catatan+"')", conn);
             SqlDataReader reader = insertHeaderOrder.ExecuteReader();
             reader.Close();
             SqlDataAdapter adp_IdHorder = new SqlDataAdapter("select id_horder from horder order by id_horder desc", conn);
@@ -146,5 +149,9 @@ namespace Probis
             f.Show();
         }
 
+        private void panelDesktop_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

@@ -129,9 +129,8 @@ namespace Probis
             {
                 addorder.dataGridView_order.Rows.Add(nama_menu, qty, harga);
             }
-
-
-           
+            Coffee.catatan = Coffee.catatan + notes.Text + "|";
+            notes.Text = "";
         }
 
         private void notes_Enter(object sender, EventArgs e)
