@@ -28,16 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(snack));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label1 = new System.Windows.Forms.Label();
             this.dataGridView_snack = new System.Windows.Forms.DataGridView();
-            this.namaMenu = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.hargaMenu = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pictureBox_coffe = new System.Windows.Forms.PictureBox();
             this.numericUpDown_jumlah = new System.Windows.Forms.NumericUpDown();
             this.button_add = new System.Windows.Forms.Button();
             this.notes = new System.Windows.Forms.TextBox();
+            this.namaMenu = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.hargaMenu = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_snack)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_coffe)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_jumlah)).BeginInit();
@@ -69,22 +69,6 @@
             this.dataGridView_snack.Size = new System.Drawing.Size(571, 489);
             this.dataGridView_snack.TabIndex = 4;
             this.dataGridView_snack.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_snack_CellClick);
-            // 
-            // namaMenu
-            // 
-            this.namaMenu.HeaderText = "Name";
-            this.namaMenu.MinimumWidth = 6;
-            this.namaMenu.Name = "namaMenu";
-            this.namaMenu.ReadOnly = true;
-            // 
-            // hargaMenu
-            // 
-            dataGridViewCellStyle1.Format = "C2";
-            dataGridViewCellStyle1.NullValue = null;
-            this.hargaMenu.DefaultCellStyle = dataGridViewCellStyle1;
-            this.hargaMenu.HeaderText = "Price";
-            this.hargaMenu.MinimumWidth = 6;
-            this.hargaMenu.Name = "hargaMenu";
             // 
             // pictureBox_coffe
             // 
@@ -123,6 +107,23 @@
             this.notes.Enter += new System.EventHandler(this.notes_Enter);
             this.notes.Leave += new System.EventHandler(this.notes_Leave);
             // 
+            // namaMenu
+            // 
+            this.namaMenu.HeaderText = "Name";
+            this.namaMenu.MinimumWidth = 6;
+            this.namaMenu.Name = "namaMenu";
+            this.namaMenu.ReadOnly = true;
+            // 
+            // hargaMenu
+            // 
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.Format = "C2";
+            dataGridViewCellStyle1.NullValue = null;
+            this.hargaMenu.DefaultCellStyle = dataGridViewCellStyle1;
+            this.hargaMenu.HeaderText = "Price";
+            this.hargaMenu.MinimumWidth = 6;
+            this.hargaMenu.Name = "hargaMenu";
+            // 
             // snack
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -153,8 +154,8 @@
         private System.Windows.Forms.PictureBox pictureBox_coffe;
         private System.Windows.Forms.NumericUpDown numericUpDown_jumlah;
         private System.Windows.Forms.Button button_add;
+        private System.Windows.Forms.TextBox notes;
         private System.Windows.Forms.DataGridViewTextBoxColumn namaMenu;
         private System.Windows.Forms.DataGridViewTextBoxColumn hargaMenu;
-        private System.Windows.Forms.TextBox notes;
     }
 }
