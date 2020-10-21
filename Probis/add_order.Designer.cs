@@ -101,7 +101,7 @@
             this.panel1.Location = new System.Drawing.Point(4, 585);
             this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1180, 117);
+            this.panel1.Size = new System.Drawing.Size(1166, 117);
             this.panel1.TabIndex = 8;
             // 
             // jFlatButton6
@@ -120,13 +120,13 @@
             this.jFlatButton6.ImageLeft = null;
             this.jFlatButton6.ImageRight = null;
             this.jFlatButton6.LeftPictureColor = System.Drawing.Color.Transparent;
-            this.jFlatButton6.Location = new System.Drawing.Point(770, 8);
+            this.jFlatButton6.Location = new System.Drawing.Point(758, 9);
             this.jFlatButton6.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.jFlatButton6.Name = "jFlatButton6";
             this.jFlatButton6.PaddingLeftPicture = new System.Windows.Forms.Padding(0);
             this.jFlatButton6.PaddingRightPicture = new System.Windows.Forms.Padding(0);
             this.jFlatButton6.RightPictureColor = System.Drawing.Color.Transparent;
-            this.jFlatButton6.Size = new System.Drawing.Size(126, 102);
+            this.jFlatButton6.Size = new System.Drawing.Size(144, 102);
             this.jFlatButton6.SizeModeLeft = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.jFlatButton6.SizeModeRight = System.Windows.Forms.PictureBoxSizeMode.Normal;
             this.jFlatButton6.TabIndex = 17;
@@ -148,7 +148,7 @@
             this.jFlatButton5.ImageLeft = null;
             this.jFlatButton5.ImageRight = null;
             this.jFlatButton5.LeftPictureColor = System.Drawing.Color.Transparent;
-            this.jFlatButton5.Location = new System.Drawing.Point(911, 5);
+            this.jFlatButton5.Location = new System.Drawing.Point(912, 9);
             this.jFlatButton5.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.jFlatButton5.Name = "jFlatButton5";
             this.jFlatButton5.PaddingLeftPicture = new System.Windows.Forms.Padding(0);
@@ -250,10 +250,10 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(208)))), ((int)(((byte)(159)))));
             this.panel2.Controls.Add(this.pictureBox1);
-            this.panel2.Location = new System.Drawing.Point(1, -7);
+            this.panel2.Location = new System.Drawing.Point(-3, -6);
             this.panel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(2059, 94);
+            this.panel2.Size = new System.Drawing.Size(1185, 94);
             this.panel2.TabIndex = 9;
             // 
             // pictureBox1
@@ -274,7 +274,7 @@
             this.panel3.Controls.Add(this.label5);
             this.panel3.Controls.Add(this.dataGridView_order);
             this.panel3.Controls.Add(this.label1);
-            this.panel3.Location = new System.Drawing.Point(774, 92);
+            this.panel3.Location = new System.Drawing.Point(760, 92);
             this.panel3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(410, 471);
@@ -378,7 +378,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1189, 712);
+            this.ClientSize = new System.Drawing.Size(1176, 712);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
