@@ -32,7 +32,7 @@ namespace Probis
         private void Coffee_Load(object sender, EventArgs e)
         {
 
-            dataGridView_kopi.Columns[1].DefaultCellStyle.Format = "0.00##";
+      
             notes.Text = "Catatan";
             conn = new SqlConnection(connection);
             conn.Open();
@@ -112,12 +112,12 @@ namespace Probis
             SqlDataReader reader = comm.ExecuteReader();
 
             List<string> listmenu = new List<string>();
-            List<string> listharga = new List<string>();
+            List<int> listharga = new List<int>();
 
             while (reader.Read())
             {
                 listmenu.Add(reader.GetValue(0).ToString());
-                listharga.Add(reader.GetValue(1).ToString());
+                listharga.Add(int.Parse(reader.GetValue(1).ToString()));
             }
             reader.Close();
 
