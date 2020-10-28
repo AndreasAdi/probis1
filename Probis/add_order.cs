@@ -11,9 +11,11 @@ using System.Windows.Forms;
 
 namespace Probis
 {
+    
     public partial class add_order : Form
     {
-        
+        public static int total;
+
         private Form currentChildForm;
         public string connection = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=" + Application.StartupPath + "\\Cafe.mdf;Integrated Security=True;MultipleActiveResultSets=true;Connect Timeout=30";
         SqlConnection conn;
@@ -73,7 +75,7 @@ namespace Probis
 
         private void dataGridView_order_RowsAdded(object sender, DataGridViewRowsAddedEventArgs e)
         {
-            int total = 0;
+            total = 0;
             foreach (DataGridViewRow row in dataGridView_order.Rows)
             {
                 int harga = int.Parse(row.Cells[2].Value.ToString());
@@ -92,7 +94,7 @@ namespace Probis
 
         private void dataGridView_order_CellValueChanged(object sender, DataGridViewCellEventArgs e)
         {
-            int total = 0;
+             total = 0;
             foreach (DataGridViewRow row in dataGridView_order.Rows)
             {
                 int harga = int.Parse(row.Cells[2].Value.ToString());
@@ -109,8 +111,8 @@ namespace Probis
             conn.Open();
             //MessageBox.Show(Coffee.catatan);
             //MessageBox.Show(DateTime.Now.ToShortDateString());
-            string justDigits = new string(label_total.Text.Where(char.IsDigit).ToArray());
-            int total = int.Parse(justDigits);
+            //string justDigits = new string(label_total.Text.Where(char.IsDigit).ToArray());
+            //int total = int.Parse(justDigits);
             //MessageBox.Show(total.ToString());
             SqlCommand insertHeaderOrder = new SqlCommand("Insert into horder(jumlah_harga,tanggal,status,catatan) values(" + total + ",PARSE('" + DateTime.Now.ToShortDateString() + "' as date USING 'AR-LB'),0,'"+Coffee.catatan+"')", conn);
             SqlDataReader reader = insertHeaderOrder.ExecuteReader();

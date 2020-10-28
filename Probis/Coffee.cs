@@ -32,8 +32,6 @@ namespace Probis
         private void Coffee_Load(object sender, EventArgs e)
         {
 
-      
-            notes.Text = "Catatan";
             conn = new SqlConnection(connection);
             conn.Open();
 
@@ -147,24 +145,6 @@ namespace Probis
 
             p.Image = Image.FromFile(Application.StartupPath+"\\"+pathgambar);
         }
-
-        private void notes_Enter(object sender, EventArgs e)
-        {
-            if (notes.Text=="Catatan")
-            {
-                notes.Text = "";
-            }
-          
-        }
-
-        private void notes_Leave(object sender, EventArgs e)
-        {
-            if (notes.Text=="")
-            {
-                notes.Text = "Catatan";
-            }
-        }
-
 
 
         private void dataGridView_kopi_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)

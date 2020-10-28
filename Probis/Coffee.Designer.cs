@@ -31,13 +31,13 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dataGridView_kopi = new System.Windows.Forms.DataGridView();
+            this.namaMenu = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.hargaMenu = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox_coffe = new System.Windows.Forms.PictureBox();
             this.button_add = new System.Windows.Forms.Button();
             this.numericUpDown_jumlah = new System.Windows.Forms.NumericUpDown();
             this.notes = new System.Windows.Forms.TextBox();
-            this.namaMenu = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.hargaMenu = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_kopi)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_coffe)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_jumlah)).BeginInit();
@@ -63,6 +63,29 @@
             this.dataGridView_kopi.TabIndex = 7;
             this.dataGridView_kopi.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_kopi_CellClick);
             this.dataGridView_kopi.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dataGridView_kopi_CellFormatting);
+            // 
+            // namaMenu
+            // 
+            dataGridViewCellStyle1.Format = "C0";
+            dataGridViewCellStyle1.NullValue = null;
+            this.namaMenu.DefaultCellStyle = dataGridViewCellStyle1;
+            this.namaMenu.HeaderText = "Name";
+            this.namaMenu.MinimumWidth = 6;
+            this.namaMenu.Name = "namaMenu";
+            this.namaMenu.ReadOnly = true;
+            // 
+            // hargaMenu
+            // 
+            this.hargaMenu.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.Format = "C0";
+            dataGridViewCellStyle2.NullValue = null;
+            this.hargaMenu.DefaultCellStyle = dataGridViewCellStyle2;
+            this.hargaMenu.HeaderText = "Price";
+            this.hargaMenu.MinimumWidth = 6;
+            this.hargaMenu.Name = "hargaMenu";
+            this.hargaMenu.ReadOnly = true;
+            this.hargaMenu.Width = 69;
             // 
             // label1
             // 
@@ -111,31 +134,6 @@
             this.notes.Name = "notes";
             this.notes.Size = new System.Drawing.Size(287, 121);
             this.notes.TabIndex = 12;
-            this.notes.Enter += new System.EventHandler(this.notes_Enter);
-            this.notes.Leave += new System.EventHandler(this.notes_Leave);
-            // 
-            // namaMenu
-            // 
-            dataGridViewCellStyle1.Format = "C0";
-            dataGridViewCellStyle1.NullValue = null;
-            this.namaMenu.DefaultCellStyle = dataGridViewCellStyle1;
-            this.namaMenu.HeaderText = "Name";
-            this.namaMenu.MinimumWidth = 6;
-            this.namaMenu.Name = "namaMenu";
-            this.namaMenu.ReadOnly = true;
-            // 
-            // hargaMenu
-            // 
-            this.hargaMenu.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.Format = "C0";
-            dataGridViewCellStyle2.NullValue = null;
-            this.hargaMenu.DefaultCellStyle = dataGridViewCellStyle2;
-            this.hargaMenu.HeaderText = "Price";
-            this.hargaMenu.MinimumWidth = 6;
-            this.hargaMenu.Name = "hargaMenu";
-            this.hargaMenu.ReadOnly = true;
-            this.hargaMenu.Width = 67;
             // 
             // Coffee
             // 
