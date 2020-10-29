@@ -43,8 +43,8 @@ namespace Probis
             {
                 if (dset.Tables[0].Rows[0].ItemArray[3].ToString() == "0")
                 {
-                    listorder L_order = new listorder();
-                    L_order.Show();
+                    halamaKoki h = new halamaKoki();
+                    h.Show();
                 }
                 else if(dset.Tables[0].Rows[0].ItemArray[3].ToString() == "1")
                 {

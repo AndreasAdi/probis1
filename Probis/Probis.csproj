@@ -12,6 +12,7 @@
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
     <PublishUrl>publish\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
@@ -24,7 +25,6 @@
     <MapFileExtensions>true</MapFileExtensions>
     <ApplicationRevision>0</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
-    <IsWebBootstrapper>false</IsWebBootstrapper>
     <UseApplicationTrust>false</UseApplicationTrust>
     <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
@@ -159,6 +159,12 @@
     <Compile Include="gudang.Designer.cs">
       <DependentUpon>gudang.cs</DependentUpon>
     </Compile>
+    <Compile Include="halamaKoki.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="halamaKoki.Designer.cs">
+      <DependentUpon>halamaKoki.cs</DependentUpon>
+    </Compile>
     <Compile Include="JoinTable.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -197,6 +203,12 @@
     <Compile Include="SplitTable.Designer.cs">
       <DependentUpon>SplitTable.cs</DependentUpon>
     </Compile>
+    <Compile Include="templateOrder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="templateOrder.Designer.cs">
+      <DependentUpon>templateOrder.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="add_order.resx">
       <DependentUpon>add_order.cs</DependentUpon>
     </EmbeddedResource>
@@ -224,6 +236,9 @@
     <EmbeddedResource Include="gudang.resx">
       <DependentUpon>gudang.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="halamaKoki.resx">
+      <DependentUpon>halamaKoki.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="JoinTable.resx">
       <DependentUpon>JoinTable.cs</DependentUpon>
     </EmbeddedResource>
@@ -250,6 +265,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="SplitTable.resx">
       <DependentUpon>SplitTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="templateOrder.resx">
+      <DependentUpon>templateOrder.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -279,6 +297,15 @@
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Cafe.mdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Cafe_log.ldf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <DependentUpon>Cafe.mdf</DependentUpon>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
