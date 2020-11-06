@@ -29,7 +29,7 @@ namespace Probis
             SqlDataReader dr = comm.ExecuteReader();
             //List<string> str = new List<string>();
             int i = 0;
-            string tanggal = DateTime.Now.ToString("dd/MM/yy") + " 00:00:00";
+            string tanggal = System.DateTime.Today.ToString();
             while (dr.Read())
             {
                 if (dr.GetValue(2).ToString()==tanggal)

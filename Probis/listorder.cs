@@ -49,7 +49,10 @@ namespace Probis
             List<int> total = new List<int>();
             List<string> status = new List<string>();
             List<string> meja = new List<string>();
-            string tanggal = DateTime.Now.ToString("dd/MM/yy")+" 00:00:00";
+
+   
+
+            string tanggal = System.DateTime.Today.ToString();
             status.Clear();
             while (reader.Read())
             {
