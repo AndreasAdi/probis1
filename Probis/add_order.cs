@@ -114,7 +114,7 @@ namespace Probis
             //string justDigits = new string(label_total.Text.Where(char.IsDigit).ToArray());
             //int total = int.Parse(justDigits);
             //MessageBox.Show(total.ToString());
-            SqlCommand insertHeaderOrder = new SqlCommand("Insert into horder(jumlah_harga,tanggal,status,catatan) values(" + total + ",PARSE('" + DateTime.Now.ToShortDateString() + "' as date USING 'AR-LB'),0,'"+Coffee.catatan+"')", conn);
+            SqlCommand insertHeaderOrder = new SqlCommand("Insert into horder(jumlah_harga,tanggal,status,catatan,meja) values(" + total + ",PARSE('" + DateTime.Now.ToShortDateString() + "' as date USING 'AR-LB'),0,'"+Coffee.catatan+"',"+numericMeja.Value+")", conn);
             SqlDataReader reader = insertHeaderOrder.ExecuteReader();
             reader.Close();
             SqlDataAdapter adp_IdHorder = new SqlDataAdapter("select id_horder from horder order by id_horder desc", conn);
@@ -128,11 +128,12 @@ namespace Probis
             {
                 int jumlahOrder= int.Parse(row.Cells[1].Value.ToString());
                 string nama = row.Cells[0].Value.ToString();
+                string catatan = row.Cells[3].Value.ToString();
                 SqlDataAdapter adp_IdMenu = new SqlDataAdapter("Select id_menu from menu where nama= '" + nama + "'", conn);
                 DataSet dsetIdMenu = new DataSet();
                 adp_IdMenu.Fill(dsetIdMenu);
                 int id_menu =int.Parse(dsetIdMenu.Tables[0].Rows[0].ItemArray[0].ToString());
-                SqlCommand insertDetailOrder = new SqlCommand("Insert into dorder(id_horder,id_menu,jumlah_order)values("+id_horder+","+id_menu+","+jumlahOrder+")", conn);
+                SqlCommand insertDetailOrder = new SqlCommand("Insert into dorder(id_horder,id_menu,jumlah_order,catatan)values("+id_horder+","+id_menu+","+jumlahOrder+",'"+catatan+"')", conn);
                 readerInsertdetail = insertDetailOrder.ExecuteReader();
             }
             readerInsertdetail.Close();

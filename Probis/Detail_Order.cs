@@ -16,11 +16,13 @@ namespace Probis
         public string connection = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=" + Application.StartupPath + "\\Cafe.mdf;Integrated Security=True;Connect Timeout=30";
         public static SqlConnection conn;
         string id;
+        string status;
         int total = 0;
-        public Detail_Order(string id)
+        public Detail_Order(string id,string status)
         {
             InitializeComponent();
             this.id = id;
+            this.status = status;
         }
 
         private void Detail_Order_Load(object sender, EventArgs e)
@@ -40,6 +42,57 @@ namespace Probis
             {
                 button3.Enabled = true;
             }
+
+            if (status =="pending")
+            {
+                btn_cancel_order.Enabled = true;
+                btn_finish_order.Enabled = false;
+                button2.Enabled = false;
+                button3.Enabled = false;
+            }
+            if (status == "process")
+            {
+                btn_cancel_order.Enabled = false;
+                btn_finish_order.Enabled = false;
+                button2.Enabled = false;
+                button3.Enabled = false;
+            }
+            if (status == "finish")
+            {
+                btn_cancel_order.Enabled = false;
+                btn_finish_order.Enabled = true;
+                button2.Enabled = true;
+                button3.Enabled = true;
+            }
+            if (status == "paid")
+            {
+                btn_cancel_order.Enabled = false;
+                btn_finish_order.Enabled = false;
+                button2.Enabled = false;
+                button3.Enabled = false;
+
+            }
+            conn.Open();
+            string join = "select id_horder from joinBill where id_join = " + id + " ";
+            SqlCommand comm = new SqlCommand(join, conn);
+            SqlDataReader reader = comm.ExecuteReader();
+       
+            while (reader.Read())
+            {
+                lbl_join.Text = lbl_join.Text + "|" + reader.GetValue(0).ToString();
+            }
+            reader.Close();
+
+            string split = "select id_horder from splitBill where id_split = " + id + " ";
+            comm = new SqlCommand(split, conn);
+            reader = comm.ExecuteReader();
+
+            while (reader.Read())
+            {
+                lbl_split.Text = lbl_split.Text + "|" + reader.GetValue(0).ToString();
+            }
+            reader.Close();
+            conn.Close();
         }
 
         private void loaddgv(string query, DataGridView dgv)
@@ -89,11 +142,14 @@ namespace Probis
 
         private void btn_finish_order_Click_1(object sender, EventArgs e)
         {
-            conn.Open();
-            SqlCommand updateHorder = new SqlCommand("UPDATE horder set status = 3  WHERE id_horder = " + id + "", conn);
-            updateHorder.ExecuteNonQuery();
-            MessageBox.Show("Berhasil");
-            conn.Close();
+            //conn.Open();
+            //SqlCommand updateHorder = new SqlCommand("UPDATE horder set status = 3  WHERE id_horder = " + id + "", conn);
+            //updateHorder.ExecuteNonQuery();
+            //MessageBox.Show("Berhasil");
+            //conn.Close();
+
+            finishorder finishorder = new finishorder(id);
+            finishorder.Show();
         }
 
         private void btn_cancel_order_Click(object sender, EventArgs e)

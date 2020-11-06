@@ -114,7 +114,7 @@ namespace Probis
             if (e.ColumnIndex == dgv_pending.Columns[6].Index)
             {
                 string id = dgv_pending.Rows[e.RowIndex].Cells[0].Value.ToString();
-                Detail_Order dorder = new Detail_Order(id);
+                Detail_Order dorder = new Detail_Order(id,"pending");
                 dorder.Show();
             }
         }
@@ -143,7 +143,7 @@ namespace Probis
             if (e.ColumnIndex == dgv_process.Columns[6].Index)
             {
                 string id = dgv_process.Rows[e.RowIndex].Cells[0].Value.ToString();
-                Detail_Order dorder = new Detail_Order(id);
+                Detail_Order dorder = new Detail_Order(id,"process");
                 dorder.Show();
             }
         }
@@ -153,7 +153,7 @@ namespace Probis
             if (e.ColumnIndex == dgv_finish.Columns[6].Index)
             {
                 string id = dgv_finish.Rows[e.RowIndex].Cells[0].Value.ToString();
-                Detail_Order dorder = new Detail_Order(id);
+                Detail_Order dorder = new Detail_Order(id,"finish");
                 dorder.Show();
             }
         }
@@ -163,7 +163,7 @@ namespace Probis
             if (e.ColumnIndex == dgv_paid.Columns[6].Index)
             {
                 string id = dgv_paid.Rows[e.RowIndex].Cells[0].Value.ToString();
-                Detail_Order dorder = new Detail_Order(id);
+                Detail_Order dorder = new Detail_Order(id,"paid");
                 dorder.Show();
             }
         }

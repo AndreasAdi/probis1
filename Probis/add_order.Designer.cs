@@ -34,6 +34,7 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.jFlatButton6 = new FlatButton.JFlatButton();
             this.jFlatButton5 = new FlatButton.JFlatButton();
+            this.panel4 = new System.Windows.Forms.Panel();
             this.jFlatButton4 = new FlatButton.JFlatButton();
             this.jFlatButton3 = new FlatButton.JFlatButton();
             this.jFlatButton2 = new FlatButton.JFlatButton();
@@ -44,16 +45,19 @@
             this.label5 = new System.Windows.Forms.Label();
             this.dataGridView_order = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.numericMeja = new System.Windows.Forms.NumericUpDown();
             this.Nama_menu = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.QTY = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Price = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.panel4 = new System.Windows.Forms.Panel();
+            this.Notes = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
+            this.panel4.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_order)).BeginInit();
-            this.panel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericMeja)).BeginInit();
             this.SuspendLayout();
             // 
             // jFlatButton1
@@ -73,7 +77,7 @@
             this.jFlatButton1.ImageRight = null;
             this.jFlatButton1.LeftPictureColor = System.Drawing.Color.Transparent;
             this.jFlatButton1.Location = new System.Drawing.Point(-3, 0);
-            this.jFlatButton1.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.jFlatButton1.Margin = new System.Windows.Forms.Padding(5);
             this.jFlatButton1.Name = "jFlatButton1";
             this.jFlatButton1.PaddingLeftPicture = new System.Windows.Forms.Padding(0);
             this.jFlatButton1.PaddingRightPicture = new System.Windows.Forms.Padding(0);
@@ -96,7 +100,6 @@
             // panel1
             // 
             this.panel1.Controls.Add(this.jFlatButton6);
-            this.panel1.Controls.Add(this.jFlatButton5);
             this.panel1.Controls.Add(this.panel4);
             this.panel1.Location = new System.Drawing.Point(4, 585);
             this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -120,8 +123,8 @@
             this.jFlatButton6.ImageLeft = null;
             this.jFlatButton6.ImageRight = null;
             this.jFlatButton6.LeftPictureColor = System.Drawing.Color.Transparent;
-            this.jFlatButton6.Location = new System.Drawing.Point(758, 9);
-            this.jFlatButton6.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.jFlatButton6.Location = new System.Drawing.Point(879, 0);
+            this.jFlatButton6.Margin = new System.Windows.Forms.Padding(5);
             this.jFlatButton6.Name = "jFlatButton6";
             this.jFlatButton6.PaddingLeftPicture = new System.Windows.Forms.Padding(0);
             this.jFlatButton6.PaddingRightPicture = new System.Windows.Forms.Padding(0);
@@ -148,8 +151,8 @@
             this.jFlatButton5.ImageLeft = null;
             this.jFlatButton5.ImageRight = null;
             this.jFlatButton5.LeftPictureColor = System.Drawing.Color.Transparent;
-            this.jFlatButton5.Location = new System.Drawing.Point(912, 9);
-            this.jFlatButton5.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.jFlatButton5.Location = new System.Drawing.Point(1037, 585);
+            this.jFlatButton5.Margin = new System.Windows.Forms.Padding(5);
             this.jFlatButton5.Name = "jFlatButton5";
             this.jFlatButton5.PaddingLeftPicture = new System.Windows.Forms.Padding(0);
             this.jFlatButton5.PaddingRightPicture = new System.Windows.Forms.Padding(0);
@@ -159,6 +162,21 @@
             this.jFlatButton5.SizeModeRight = System.Windows.Forms.PictureBoxSizeMode.Normal;
             this.jFlatButton5.TabIndex = 16;
             this.jFlatButton5.Click += new System.EventHandler(this.jFlatButton5_Click);
+            // 
+            // panel4
+            // 
+            this.panel4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(208)))), ((int)(((byte)(159)))));
+            this.panel4.Controls.Add(this.jFlatButton4);
+            this.panel4.Controls.Add(this.jFlatButton3);
+            this.panel4.Controls.Add(this.jFlatButton1);
+            this.panel4.Controls.Add(this.jFlatButton2);
+            this.panel4.Location = new System.Drawing.Point(3, 0);
+            this.panel4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(747, 122);
+            this.panel4.TabIndex = 16;
             // 
             // jFlatButton4
             // 
@@ -177,7 +195,7 @@
             this.jFlatButton4.ImageRight = null;
             this.jFlatButton4.LeftPictureColor = System.Drawing.Color.Transparent;
             this.jFlatButton4.Location = new System.Drawing.Point(560, 0);
-            this.jFlatButton4.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.jFlatButton4.Margin = new System.Windows.Forms.Padding(5);
             this.jFlatButton4.Name = "jFlatButton4";
             this.jFlatButton4.PaddingLeftPicture = new System.Windows.Forms.Padding(0);
             this.jFlatButton4.PaddingRightPicture = new System.Windows.Forms.Padding(0);
@@ -205,7 +223,7 @@
             this.jFlatButton3.ImageRight = null;
             this.jFlatButton3.LeftPictureColor = System.Drawing.Color.Transparent;
             this.jFlatButton3.Location = new System.Drawing.Point(374, 0);
-            this.jFlatButton3.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.jFlatButton3.Margin = new System.Windows.Forms.Padding(5);
             this.jFlatButton3.Name = "jFlatButton3";
             this.jFlatButton3.PaddingLeftPicture = new System.Windows.Forms.Padding(0);
             this.jFlatButton3.PaddingRightPicture = new System.Windows.Forms.Padding(0);
@@ -233,7 +251,7 @@
             this.jFlatButton2.ImageRight = null;
             this.jFlatButton2.LeftPictureColor = System.Drawing.Color.Transparent;
             this.jFlatButton2.Location = new System.Drawing.Point(187, 0);
-            this.jFlatButton2.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.jFlatButton2.Margin = new System.Windows.Forms.Padding(5);
             this.jFlatButton2.Name = "jFlatButton2";
             this.jFlatButton2.PaddingLeftPicture = new System.Windows.Forms.Padding(0);
             this.jFlatButton2.PaddingRightPicture = new System.Windows.Forms.Padding(0);
@@ -253,7 +271,7 @@
             this.panel2.Location = new System.Drawing.Point(-3, -6);
             this.panel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1185, 94);
+            this.panel2.Size = new System.Drawing.Size(1310, 94);
             this.panel2.TabIndex = 9;
             // 
             // pictureBox1
@@ -270,6 +288,8 @@
             // 
             // panel3
             // 
+            this.panel3.Controls.Add(this.numericMeja);
+            this.panel3.Controls.Add(this.label2);
             this.panel3.Controls.Add(this.label_total);
             this.panel3.Controls.Add(this.label5);
             this.panel3.Controls.Add(this.dataGridView_order);
@@ -277,7 +297,7 @@
             this.panel3.Location = new System.Drawing.Point(760, 92);
             this.panel3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(410, 471);
+            this.panel3.Size = new System.Drawing.Size(529, 471);
             this.panel3.TabIndex = 10;
             // 
             // label_total
@@ -309,14 +329,14 @@
             this.dataGridView_order.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Nama_menu,
             this.QTY,
-            this.Price});
-            this.dataGridView_order.Location = new System.Drawing.Point(20, 61);
+            this.Price,
+            this.Notes});
+            this.dataGridView_order.Location = new System.Drawing.Point(20, 99);
             this.dataGridView_order.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dataGridView_order.Name = "dataGridView_order";
-            this.dataGridView_order.ReadOnly = true;
             this.dataGridView_order.RowHeadersWidth = 51;
             this.dataGridView_order.RowTemplate.Height = 24;
-            this.dataGridView_order.Size = new System.Drawing.Size(370, 327);
+            this.dataGridView_order.Size = new System.Drawing.Size(506, 293);
             this.dataGridView_order.TabIndex = 14;
             this.dataGridView_order.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             this.dataGridView_order.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_order_CellValueChanged);
@@ -327,11 +347,27 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(150, 17);
+            this.label1.Location = new System.Drawing.Point(213, 15);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(116, 32);
             this.label1.TabIndex = 12;
             this.label1.Text = "ORDER";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(20, 65);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(48, 17);
+            this.label2.TabIndex = 17;
+            this.label2.Text = "Table ";
+            // 
+            // numericMeja
+            // 
+            this.numericMeja.Location = new System.Drawing.Point(83, 63);
+            this.numericMeja.Name = "numericMeja";
+            this.numericMeja.Size = new System.Drawing.Size(80, 22);
+            this.numericMeja.TabIndex = 18;
             // 
             // Nama_menu
             // 
@@ -347,7 +383,7 @@
             this.QTY.MinimumWidth = 6;
             this.QTY.Name = "QTY";
             this.QTY.ReadOnly = true;
-            this.QTY.Width = 64;
+            this.QTY.Width = 66;
             // 
             // Price
             // 
@@ -356,30 +392,22 @@
             this.Price.MinimumWidth = 6;
             this.Price.Name = "Price";
             this.Price.ReadOnly = true;
-            this.Price.Width = 67;
+            this.Price.Width = 69;
             // 
-            // panel4
+            // Notes
             // 
-            this.panel4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(208)))), ((int)(((byte)(159)))));
-            this.panel4.Controls.Add(this.jFlatButton4);
-            this.panel4.Controls.Add(this.jFlatButton3);
-            this.panel4.Controls.Add(this.jFlatButton1);
-            this.panel4.Controls.Add(this.jFlatButton2);
-            this.panel4.Location = new System.Drawing.Point(3, 0);
-            this.panel4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(747, 122);
-            this.panel4.TabIndex = 16;
+            this.Notes.HeaderText = "Notes";
+            this.Notes.MinimumWidth = 6;
+            this.Notes.Name = "Notes";
             // 
             // add_order
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1176, 712);
+            this.ClientSize = new System.Drawing.Size(1301, 712);
             this.Controls.Add(this.panel3);
+            this.Controls.Add(this.jFlatButton5);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panelDesktop);
@@ -392,12 +420,13 @@
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.add_order_FormClosing);
             this.Load += new System.EventHandler(this.add_order_Load);
             this.panel1.ResumeLayout(false);
+            this.panel4.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_order)).EndInit();
-            this.panel4.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.numericMeja)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -418,9 +447,12 @@
         public System.Windows.Forms.DataGridView dataGridView_order;
         private System.Windows.Forms.Label label_total;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.NumericUpDown numericMeja;
+        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Nama_menu;
         private System.Windows.Forms.DataGridViewTextBoxColumn QTY;
         private System.Windows.Forms.DataGridViewTextBoxColumn Price;
-        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Notes;
     }
 }

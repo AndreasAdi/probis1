@@ -51,6 +51,7 @@ namespace Probis
         private void button_add_Click(object sender, EventArgs e)
         {
             string qty = numericUpDown_jumlah.Value.ToString();
+            string catatan = notes.Text.ToString();
             bool ada = false;
 
             if (addorder.dataGridView_order.Rows.Count > 0)
@@ -72,13 +73,13 @@ namespace Probis
                 }
                 if (ada == false)
                 {
-                    addorder.dataGridView_order.Rows.Add(nama_menu, qty, harga);
+                    addorder.dataGridView_order.Rows.Add(nama_menu, qty, harga,catatan);
                 }
 
             }
             else
             {
-                addorder.dataGridView_order.Rows.Add(nama_menu, qty, harga);
+                addorder.dataGridView_order.Rows.Add(nama_menu, qty, harga, catatan);
             }
             catatan = catatan+notes.Text+"|";
             notes.Text = "";

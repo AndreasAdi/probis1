@@ -68,7 +68,7 @@ namespace Probis
 
             for (int i = 0; i < listmenu.Count; i++)
             {
-                dgv.Rows.Add(listmenu[i], listharga[i]);
+                dgv.Rows.Add(listmenu[i], int.Parse(listharga[i]));
             }
         }
 
@@ -110,6 +110,7 @@ namespace Probis
         {
             string qty = numericUpDown_jumlah.Value.ToString();
             bool ada = false;
+            string catatan = notes.Text.ToString();
 
             if (addorder.dataGridView_order.Rows.Count > 0)
             {
@@ -130,13 +131,13 @@ namespace Probis
                 }
                 if (ada == false)
                 {
-                    addorder.dataGridView_order.Rows.Add(nama_menu, qty, harga);
+                    addorder.dataGridView_order.Rows.Add(nama_menu, qty, harga,catatan);
                 }
 
             }
             else
             {
-                addorder.dataGridView_order.Rows.Add(nama_menu, qty, harga);
+                addorder.dataGridView_order.Rows.Add(nama_menu, qty, harga,catatan);
             }
             Coffee.catatan = Coffee.catatan + notes.Text + "|";
             notes.Text = "";

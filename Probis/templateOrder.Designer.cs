@@ -95,7 +95,7 @@
             this.noOrder.AutoSize = true;
             this.noOrder.Location = new System.Drawing.Point(159, 22);
             this.noOrder.Name = "noOrder";
-            this.noOrder.Size = new System.Drawing.Size(53, 20);
+            this.noOrder.Size = new System.Drawing.Size(46, 17);
             this.noOrder.TabIndex = 2;
             this.noOrder.Text = "label1";
             // 

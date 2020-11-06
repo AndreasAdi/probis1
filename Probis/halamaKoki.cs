@@ -13,7 +13,8 @@ namespace Probis
 {
     public partial class halamaKoki : Form
     {
-        public string connection = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=" + Application.StartupPath + "\\Cafe.mdf;Integrated Security=True;Connect Timeout=30";
+        public string connection = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=" + Application.StartupPath + "\\Cafe.mdf;Integrated Security=True;MultipleActiveResultSets=true;Connect Timeout=30";
+        //public string connection = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=" + Application.StartupPath + "\\Cafe.mdf;Integrated Security=True;Connect Timeout=30";
         public static SqlConnection conn;
         public halamaKoki()
         {
@@ -23,7 +24,7 @@ namespace Probis
         {
             conn = new SqlConnection(connection);
             conn.Open();
-            string query = "select * from horder where status = 0";
+            string query = "select * from horder where status = 0 or status =1";
             SqlCommand comm = new SqlCommand(query, conn);
             SqlDataReader dr = comm.ExecuteReader();
             //List<string> str = new List<string>();

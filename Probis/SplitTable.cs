@@ -60,7 +60,7 @@ namespace Probis
 
             for (int i = 0; i < listmenu.Count; i++)
             {
-                dgv.Rows.Add(listmenu[i], listqty[i], listharga[i]);
+                dgv.Rows.Add(listmenu[i], listqty[i], int.Parse(listharga[i]));
             }
 
             conn.Close();
@@ -234,6 +234,10 @@ namespace Probis
             SqlCommand insertHeaderOrder = new SqlCommand("Insert into horder(jumlah_harga,tanggal,status,catatan) values(" + total + ",PARSE('" + DateTime.Now.ToShortDateString() + "' as date USING 'AR-LB'),2,'')", conn);
             SqlDataReader reader = insertHeaderOrder.ExecuteReader();
             reader.Close();
+
+            SqlCommand insertsplit = new SqlCommand("Insert into splitBill(id_split,id_horder) values(" + idbaru + "," + id + ")", conn);
+            insertsplit.ExecuteNonQuery();
+     
 
             MessageBox.Show(total+"");
             MessageBox.Show(idbaru);

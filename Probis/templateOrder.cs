@@ -42,6 +42,19 @@ namespace Probis
             {
                 dataGridOrder.Rows.Add(reader.GetValue(1).ToString(), reader.GetValue(0).ToString());
             }
+
+            reader.Close();
+            query = "select status from horder d where id_horder = '" + idOrder + "'";
+            comm = new SqlCommand(query, conn);
+            reader = comm.ExecuteReader();
+            while (reader.Read())
+            {
+                if (reader.GetValue(0).ToString()=="1")
+                {
+                    btnProcessOrder.Enabled = false;
+                }
+            }
+            reader.Close();
             conn.Close();
         }
         private void cek()

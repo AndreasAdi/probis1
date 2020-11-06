@@ -32,7 +32,7 @@ namespace Probis
         {
             conn = new SqlConnection(connection);
             conn.Open();
-            string query = "Select * from horder where status =0 and id_horder != "+id+" ";
+            string query = "Select * from horder where status =2 and id_horder != "+id+" ";
             loaddgv(query, dataGridView1);
 
             query = "Select * from horder where id_horder = "+id+" ";
@@ -134,6 +134,10 @@ namespace Probis
                 comm.ExecuteNonQuery();
 
 
+                SqlCommand insertjoin = new SqlCommand("Insert into joinBill(id_join,id_horder) values(" + idbaru + "," + idhorder + ")", conn);
+                insertjoin.ExecuteNonQuery();
+
+
                 SqlCommand updateHorder = new SqlCommand("UPDATE horder set status = 4  WHERE id_horder = " + idhorder + "", conn);
                 updateHorder.ExecuteNonQuery();
             }
@@ -147,7 +151,7 @@ namespace Probis
 
             MessageBox.Show("Berhasil join");
 
-            Detail_Order d = new Detail_Order(idbaru);
+            Detail_Order d = new Detail_Order(idbaru,"finish");
             this.Hide();
             d.Show();
             this.Close();
